@@ -1,0 +1,54 @@
+name: Build and publish package index
+
+on:
+  push:
+    branches: [main]
+  schedule:
+    # daily at 06:17 UTC — picks up new tags/branches pushed to the tracked repos
+    - cron: '17 6 * * *'
+  workflow_dispatch: {}
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: shivammathur/setup-php@v2
+        with:
+          php-version: '8.4'
+          tools: composer
+
+      - name: Allow the satis plugin
+        run: composer config --no-plugins allow-plugins.composer/satis true
+
+      - name: Install satis
+        run: composer install --no-interaction --no-progress
+
+      - name: Build static package repository
+        run: php vendor/bin/satis build satis.json build
+
+      - uses: actions/configure-pages@v5
+
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: build
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v4

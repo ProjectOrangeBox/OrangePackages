@@ -1,0 +1,17 @@
+{
+    "name": "projectorangebox/orange-packages-builder",
+    "description": "Builds a static Composer package repository (via composer/satis) indexing all public orange/* PHP packages.",
+    "type": "project",
+    "license": "MIT",
+    "require": {
+        "php": "^8.4",
+        "composer/satis": "dev-main"
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "config": {
+        "allow-plugins": {
+            "composer/satis": true
+        }
+    }
+}
