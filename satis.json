@@ -3,7 +3,7 @@
     "homepage": "https://projectorangebox.github.io/OrangePackages",
     "output-html": true,
     "repositories": [
-        { "type": "vcs", "url": "https://github.com/ProjectOrangeBox/OrangePackage.git", "no-api": true },
+        { "type": "vcs", "url": "https://github.com/ProjectOrangeBox/orange.git", "no-api": true },
         { "type": "vcs", "url": "https://github.com/ProjectOrangeBox/cookies.git", "no-api": true },
         { "type": "vcs", "url": "https://github.com/ProjectOrangeBox/files.git", "no-api": true },
         { "type": "vcs", "url": "https://github.com/ProjectOrangeBox/request.git", "no-api": true },
