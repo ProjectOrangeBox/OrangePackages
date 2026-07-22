@@ -8,7 +8,6 @@
         { "type": "vcs", "url": "https://github.com/ProjectOrangeBox/files.git", "no-api": true },
         { "type": "vcs", "url": "https://github.com/ProjectOrangeBox/request.git", "no-api": true },
         { "type": "vcs", "url": "https://github.com/ProjectOrangeBox/disc.git", "no-api": true },
-        { "type": "vcs", "url": "https://github.com/ProjectOrangeBox/validate.git", "no-api": true },
         { "type": "vcs", "url": "https://github.com/ProjectOrangeBox/stash.git", "no-api": true },
         { "type": "vcs", "url": "https://github.com/ProjectOrangeBox/snippets.git", "no-api": true },
         { "type": "vcs", "url": "https://github.com/ProjectOrangeBox/session.git", "no-api": true },
