@@ -28,6 +28,7 @@
         { "type": "vcs", "url": "https://github.com/ProjectOrangeBox/auth.git", "no-api": true },
         { "type": "vcs", "url": "https://github.com/ProjectOrangeBox/asset.git", "no-api": true },
         { "type": "vcs", "url": "https://github.com/ProjectOrangeBox/acl.git", "no-api": true },
+        { "type": "vcs", "url": "https://github.com/ProjectOrangeBox/validate.git", "no-api": true },
         { "type": "vcs", "url": "https://github.com/ProjectOrangeBox/benchmark.git", "no-api": true }
     ],
     "require-all": true
